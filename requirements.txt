@@ -1,0 +1,9 @@
+streamlit>=1.40
+crewai>=0.100
+litellm>=1.60
+sentence-transformers>=3.0
+scikit-learn>=1.5
+pypdf>=5.0
+pandas>=2.2
+numpy>=1.26
+python-dotenv>=1.0
