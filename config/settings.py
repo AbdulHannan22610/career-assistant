@@ -4,7 +4,6 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass
-from functools import lru_cache
 
 from dotenv import load_dotenv
 
@@ -36,7 +35,7 @@ def _streamlit_secret(name: str) -> str | None:
     return str(value).strip() if value else None
 
 
-@lru_cache(maxsize=1)
+
 def get_settings() -> Settings:
     """Prefer Streamlit Secrets, then fall back to local environment variables."""
     api_key = _streamlit_secret("GROQ_API_KEY") or os.getenv("GROQ_API_KEY")
